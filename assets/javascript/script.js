@@ -1,18 +1,21 @@
 var startQuizEl = document.querySelector("#start-quiz");
 var introEl = document.querySelector("#intro");
+var formEl = document.querySelector("form");
 var containerEl = document.querySelector(".container");
 var countdownEl = document.querySelector("#countdown");
 var quizQuestionnaireEl = document.querySelector("#quiz-questionnaire");
 var navigateToResultsPageEL = document.querySelector("#navigate_to_result");
 var submitButtonEl = document.querySelector("#submitbtn");
 var initialContainer = document.querySelector("#initial");
-var formEl = document.querySelector("form");
 
 var score = 0;
 var seconds = 75;
 var result = "";
 var userInitial = "";
 
+//omg i broke the code
+
+//questions
 var questions = [
   {
     title: "Commonly used data types DO NOT include:",
@@ -157,10 +160,12 @@ function displayQuestionAtIndex(i) {
   divEl.textContent = questions[i]["title"];
   quizQuestionnaireEl.appendChild(divEl);
   divEl.setAttribute("class", "question");
+  
   var questionDivEl = document.querySelector(".question");
   var olEl = document.createElement("ol");
   questionDivEl.appendChild(olEl);
   olEl.setAttribute("class", "choices");
+
   var choicesOl = document.querySelector(".choices");
   var li1El = document.createElement("li")
   var li2El = document.createElement("li")
