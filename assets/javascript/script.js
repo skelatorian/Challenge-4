@@ -2,20 +2,19 @@ var startQuizEl = document.querySelector("#start-quiz");
 var introEl = document.querySelector("#intro");
 var formEl = document.querySelector("form");
 var containerEl = document.querySelector(".container");
+var initialContainer = document.querySelector("#initial");
 var countdownEl = document.querySelector("#countdown");
 var quizQuestionnaireEl = document.querySelector("#quiz-questionnaire");
-var navigateToResultsPageEL = document.querySelector("#navigate_to_result");
 var submitButtonEl = document.querySelector("#submitbtn");
-var initialContainer = document.querySelector("#initial");
+var navigateToResultsPageEL = document.querySelector("#navigate_to_result");
+
 
 var score = 0;
 var seconds = 75;
 var result = "";
 var userInitial = "";
 
-//omg i broke the code
-
-//questions
+//mock questions 
 var questions = [
   {
     title: "Commonly used data types DO NOT include:",
@@ -58,15 +57,15 @@ startQuizEl.addEventListener("click", function(event) {
   introEl.setAttribute("class", "hide");
   countdownTimer();
  
-    var i = 0;
-    displayQuestionAtIndex(i);
-    var choiceList = document.querySelector("ol");
-    choiceList.addEventListener("click", function(event) {
-        event.preventDefault;
-        var userSelection = event.target.innerText;
-        var correctAnswer = questions[i]["answer"];
-        result = displayResultforIndividualQuestion(userSelection, correctAnswer);
-        result ? seconds : seconds = seconds - 10 
+  var i = 0;
+  displayQuestionAtIndex(i);
+  var choiceList = document.querySelector("ol");
+  choiceList.addEventListener("click", function(event) {
+    event.preventDefault;
+    var userSelection = event.target.innerText;
+    var correctAnswer = questions[i]["answer"];
+    result = displayResultforIndividualQuestion(userSelection, correctAnswer);
+    result ? seconds : seconds = seconds - 10 
     
     i++;
     displayQuestionAtIndex(i);
@@ -122,14 +121,13 @@ startQuizEl.addEventListener("click", function(event) {
 });
 }
 
-//end
 
 function submitFunc(){
   submitButtonEl.addEventListener("click", function(event) {
     event.preventDefault();
     userInitial = initialContainer.value;
     console.log(userInitial);
-    window.location.href = "highscores.html";
+    window.location.href = "highscoreboard.html";
     var userScoreCard = {
       "user-initial": userInitial,
       "user-score": score
@@ -160,12 +158,10 @@ function displayQuestionAtIndex(i) {
   divEl.textContent = questions[i]["title"];
   quizQuestionnaireEl.appendChild(divEl);
   divEl.setAttribute("class", "question");
-  
   var questionDivEl = document.querySelector(".question");
   var olEl = document.createElement("ol");
   questionDivEl.appendChild(olEl);
   olEl.setAttribute("class", "choices");
-
   var choicesOl = document.querySelector(".choices");
   var li1El = document.createElement("li")
   var li2El = document.createElement("li")
