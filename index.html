@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Quiz</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!--script src-->
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -14,18 +15,18 @@
 <body>
   <div class="container">
     <div id="header">
-      <label class="header-item"><a href="./highscores.html" target="_self" id="view-highscores">View Highscores</a></label>
+      <label class="header-item"><a href="./highscoreboard.html" target="_self" id="view-highscores">View Highscores</a></label>
       <label class="header-item" id="time">Time: <span id="countdown"></span></label>
     </div>
     <br>
     <br>
     <br>
-
+<!--Intro div -->
     <div id="intro">
-      <h1 id="header">Coding Quiz Challenge!</h1>
+      <h1 id="header">Coding Quiz Challenge</h1>
       <p id="intro-p">Try to answer the following code related questions within the time
          limit. Please keep in mind that all incorrect answers will penalize your scoretime
-         by ten seconds.
+         by ten seconds!
       </p>
       <div id="start-quiz"><button>Start Quiz</button></div>
     </div>
@@ -41,6 +42,6 @@
     </div>
 
   </div>   
-  <script src="./script.js"></script>
+  <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
