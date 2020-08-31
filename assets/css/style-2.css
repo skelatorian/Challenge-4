@@ -12,10 +12,12 @@ body {
 #container-highscores {
   padding: 20px;
   text-align: center;
+  align-content: center;
 }
 
 h1 {
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 a {
