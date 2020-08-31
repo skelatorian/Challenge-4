@@ -18,6 +18,3 @@ clearHighScoreEl.addEventListener("click", function(event) {
 });
 
 renderLastUserScoreCard();
-
-
-
