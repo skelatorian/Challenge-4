@@ -8,6 +8,7 @@ var quizQuestionnaireEl = document.querySelector("#quiz-questionnaire");
 var submitButtonEl = document.querySelector("#submitbtn");
 var navigateToResultsPageEL = document.querySelector("#navigate_to_result");
 
+
 //mock seconds
 
 var seconds = 75;
